@@ -10,7 +10,7 @@
     <% if user_signed_in? %>
 
       <!-- Links when logged in -->
-      <%= link_to "Catalogo de Productos", products_path, class: "navbar-wagon-item navbar-wagon-link" %>
+      <%= link_to "Catálogo", products_path, class: "navbar-wagon-item navbar-wagon-link" %>
 
       <!-- Avatar with dropdown menu -->
       <div class="navbar-wagon-item">
@@ -40,7 +40,7 @@
       </div>
     <% else %>
       <!-- Login link (when logged out) -->
-      <%= link_to "Catalogo de Productos", products_path, class: "navbar-wagon-item navbar-wagon-link" %>
+      <%= link_to "Catálogo", products_path, class: "navbar-wagon-item navbar-wagon-link" %>
     <% end %>
   </div>
 
