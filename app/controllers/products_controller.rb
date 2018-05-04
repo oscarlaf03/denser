@@ -1,8 +1,9 @@
 class ProductsController < ApplicationController
   before_action :set_product, only: [:show, :edit, :update, :destroy]
+  before_action :manager?, only: [:show]
 
   def index
-    @products = Product.all
+    @products = policy_scope(Product)
   end
 
   def show
@@ -10,6 +11,7 @@ class ProductsController < ApplicationController
 
   def new
     @product = Product.new
+    authorize @product
   end
 
   def create
@@ -43,6 +45,8 @@ class ProductsController < ApplicationController
     @product.destroy
   end
 
+
+
   private
 
   def product_params
@@ -51,6 +55,12 @@ class ProductsController < ApplicationController
 
   def set_product
     @product = Product.find(params[:id])
+    authorize @product
+  end
+
+
+  def manager?
+    @actions = user_signed_in? && current_user.manager?
   end
 
 end

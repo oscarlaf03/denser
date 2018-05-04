@@ -37,7 +37,6 @@
       </div>
     <% else %>
       <!-- Login link (when logged out) -->
-      <%= link_to t(".sign_in", default: "Login"), new_user_session_path, class: "navbar-wagon-item navbar-wagon-link" %>
       <%= link_to "Catalogo de Productos", products_path, class: "navbar-wagon-item navbar-wagon-link" %>
     <% end %>
   </div>
@@ -47,9 +46,7 @@
     <div class="dropdown">
       <i class="fa fa-bars dropdown-toggle" data-toggle="dropdown"></i>
       <ul class="dropdown-menu dropdown-menu-right navbar-wagon-dropdown-menu">
-        <li><a href="#">Some mobile link</a></li>
-        <li><a href="#">Other one</a></li>
-        <li><a href="#">Other one</a></li>
+        <li><a href="<%= products_path  %>">Ver Catalogo</a>></li>
       </ul>
     </div>
   </div>

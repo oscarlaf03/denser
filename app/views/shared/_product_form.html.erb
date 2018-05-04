@@ -5,11 +5,13 @@
 
   <%= f.input :item_type, label: 'Tipo de producto'  %>
   <%= f.input :color, label: 'Colores disponibles'  %>
+  <%= f.input :measures, label: 'Coloque las medidas en cms', placeholder: 'Ejemplo: 20 x 5'  %>
+  <%= f.input :capacity, label: 'Coloque la capacidad en litros', placeholder: 'Ejemplo: "2" ' %>
   <%= f.input :price, label: 'Precio'  %>
   <%= f.input :code, label: 'Codigo de producto'  %>
   <%= f.input :main_photo, label:'Foto principal del producto' %>
   <%= f.input :banner, label:'Foto para banner de este producto' %>
-  <p>Agrega mas imagenes a este producto</p>
-  <%= f.input :photos, as: :file,label: 'Agregar imagenes',:input_html => { :multiple => true }, name: "product[product_attributes][][photos]" %>
-  <%= f.submit   %>
+  <p>Opcional: Agrega más imagenes para la galeria de fotos de este producto</p>
+  <%= f.input :photos, as: :file,label: 'Agregar imagenes opcionales',:input_html => { :multiple => true }, name: "product[product_attributes][][photos]" %>
+  <%= f.submit class: 'btn btn-success btn-lg'  %>
 <% end %>
