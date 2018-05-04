@@ -1,0 +1,9 @@
+<div class="container">
+  <h1 class= 'center'>Bienvenido a Denser</h1>
+  <h2 class= 'center'>Consulte nuestra seleccion de articulos especiales para su hogar</h2>
+  <div class=" row products-index-container">
+    <% @products.each do |product| %>
+      <%= render 'shared/product_index_card', product: product  %>
+    <% end %>
+  </div>
+</div>

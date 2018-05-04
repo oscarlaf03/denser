@@ -1,0 +1,15 @@
+<%= simple_form_for(product, :html => { :multipart => true } )do |f| %>
+  <%= f.input :name, label: 'Nombre de producto'  %>
+  <%= f.input :description, label: 'Descripcion' %>
+  <%= f.input :category, label:'Categoria de producto'  %>
+
+  <%= f.input :item_type, label: 'Tipo de producto'  %>
+  <%= f.input :color, label: 'Colores disponibles'  %>
+  <%= f.input :price, label: 'Precio'  %>
+  <%= f.input :code, label: 'Codigo de producto'  %>
+  <%= f.input :main_photo, label:'Foto principal del producto' %>
+  <%= f.input :banner, label:'Foto para banner de este producto' %>
+  <p>Agrega mas imagenes a este producto</p>
+  <%= f.input :photos, as: :file,label: 'Agregar imagenes',:input_html => { :multiple => true }, name: "product[product_attributes][][photos]" %>
+  <%= f.submit   %>
+<% end %>
