@@ -23,6 +23,7 @@ $headers-font: "Raleway", "Helvetica", "sans-serif";
   }
 }
 
+
 // To use a font file (.woff) uncomment following lines
 // @font-face {
 //   font-family: "Font Name";
@@ -32,3 +33,22 @@ $headers-font: "Raleway", "Helvetica", "sans-serif";
 //        font-url('FontFile.ttf') format('truetype')
 // }
 // $my-font: "Font Name";
+
+
+// @font-face {
+//   font-family: "Bad Script";
+//   src: font-url('Bad_Script.eot');
+//   src: font-url('Bad_Script.eot?#iefix') format('embedded-opentype'),
+//        font-url('Bad_Script.woff') format('woff'),
+//        font-url('Bad_Script.ttf') format('truetype')
+// }
+// $bad-script: "Bad Script";
+
+
+// @font-face {
+//   font-family: "Bad Script";
+//   src: font-url('Bad_Script.ttf') format('truetype');
+// }
+
+// $bad-script: "Bad Script";
+
