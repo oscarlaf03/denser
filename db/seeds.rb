@@ -8,6 +8,7 @@
 if User.find_by(email: 'ortizg.oscar@gmail.com').nil?
   oscar = User.new(email: 'ortizg.oscar@gmail.com')
   oscar.manager = true
+  oscar.password = '123123'
   oscar.save
   else
   oscar = User.find_by(email: 'ortizg.oscar@gmail.com')
@@ -18,12 +19,17 @@ end
 if User.find_by(email: 'jose.ortiz@denser.com.mx').nil?
   jose = User.new(email: 'jose.ortiz@denser.com.mx')
   jose.manager = true
+  jose.password = '123123'
   jose.save
   else
   jose = User.find_by(email: 'jose.ortiz@denser.com.mx')
   jose.manager = true
   jose.save
+
 end
+puts 'users created'
+puts "total users: #{User.count}"
+puts 'creating product'
 
 vaso = Product.new
 vaso.name = 'Vaso deportivo'
@@ -33,6 +39,9 @@ vaso.item_type = 'vaso'
 vaso[:banner] = "image/upload/v1525393783/yepns2aa2hfjqutezecl.png"
 vaso[:main_photo] = "image/upload/v1525393780/upgw7tjfhqi3hnrmmvvh.png"
 vaso.measures = '20 x 25'
-vaso.colores = %w[ verde amarillo rojo blanco ]
+vaso.color = %w[ verde amarillo rojo blanco ]
 vaso.capacity = 0.5
 vaso.save
+puts 'Created cup product'
+puts "Total products created: #{Product.count}"
+puts 'All tasks finished'
